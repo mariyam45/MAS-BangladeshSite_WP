@@ -77,3 +77,10 @@ register_sidebar([
   'after_widget'=>''
 
 ]);
+register_sidebar([
+  'name'=>'FooterLogo',
+  'id'=>'fLogo',
+  'before_widget'=>'',
+  'after_widget'=>''
+
+]);

@@ -357,7 +357,7 @@
           <!-- list part end -->
 
           <!-- portal part  -->
-          <div class="portal ms-2">
+          <div class="portal ms-2 mt-5">
             
             <div class="row ">
               <div class="col-sm-4 portalImg">
@@ -382,23 +382,7 @@
             <!-- side img  -->
             <a href="#">
                 <?php dynamic_sidebar('sideimg');?>
-              <!-- <img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Bangladesh-Directory.jpg" class="d-block w-100 mb-2" alt=""> -->
-            </a>
-            <!-- <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/bangladesh-portal--batton-bangla.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Jonotar-Sorkar-banner-Bangl (1).jpg" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/bkkb_button_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/mygov_bn.jpg" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/National-portal (1).png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/prottyon.jpg" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_Apps_bn (5).png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_Dictonary_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_DistrictBranding_b (3).png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_fund_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_govtjob_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_guard_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_inherit_bn (4).png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_policy_bn.png" class="d-block w-100 mb-2" alt=""></a>
-            <a href="#"><img src="<?php echo get_template_directory_uri()?>./assets/img/sidebar/Tamplate_govtjob_bn.png" class="d-block w-100 mb-2" alt=""></a> -->
+              
           </div>
           <div class="side_selecte">
             <!-- selecte part  -->
@@ -451,11 +435,18 @@
         <img  src="assets/img/footer/footer_top_bg.png" alt="">
       </div>
       <div class="row footer-bottom">
-        <div class="col-sm-7 footer-left">
-          <nav class="navbar navbar-expand-lg  menu_bar">
+        <div class="col-sm-8 footer-left position-relative">
+          <nav class="navbar navbar-expand-lg  menu_bar my-2">
             <div class="containerd">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav   px-0">
+                <?php
+            // 3.b --------
+            wp_nav_menu([
+              'theme_location'=>'FooterMenu',
+              'menu_class'=>'navbar-nav fmenu'
+            ]);
+            ?>
+                <!-- <ul class="navbar-nav   px-0">
                   <li class="nav-item">
                     <a class="nav-link  border-end border-secondary-subtle" aria-current="page" href="#">গোপনীয়তার নীতিমালা</a>
                   </li>
@@ -474,18 +465,18 @@
                   
                 
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </nav>
-          <p>সাইটটি শেষ হাল-নাগাদ করা হয়েছে: ২০২৩-০৯-১৭ 08:১৬:২২</p>
+          <p class="ms-4 position-absolute bottom-0 start-0">সাইটটি শেষ হাল-নাগাদ করা হয়েছে: ২০২৩-০৯-১৭ 08:১৬:২২</p>
         </div>
-        <div class="col-sm-5 footer-right">
+        <div class="col-sm-4 footer-right">
           <p class="text-sm">পরিকল্পনা ও বাস্তবায়নে: এটুআই, মন্ত্রিপরিষদ বিভাগ, বিসিসি, বেসিস, ডিওআইসিটি</p>
 
           <div class="d-flex">
             <p class="l-tx text-center">কারিগরি সহায়তায়:</p>
-            <img class="justify-content-end" src="assets/img/footer/np-logo-set.png" alt="">
+              <?php dynamic_sidebar('fLogo');?>
           </div>
         </div>
       </div>

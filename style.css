@@ -14,6 +14,9 @@ body {
   width: 996px;
   margin: 0 auto;
 }
+a {
+  text-decoration: none;
+}
 /* --------------- */
 
 /* header part  */
@@ -209,12 +212,9 @@ color: black;
 
 /* list end */
 /* portal */
-.portalImg a img {
-  display: inline-block !important;
-  width: 220px !important;
-  height: 68px !important;
+/* .portal img {
   margin-bottom: 5px;
-}
+} */
 /* portal end */
 .side_selecte h4 {
   color: #73318f;
@@ -266,4 +266,21 @@ color: black;
   display: block !important;
   width: 100% !important;
   height: 300px !important;
+}
+.fmenu li {
+  list-style: none;
+  border-right: 1px solid #a3a3a3;
+  margin: 0px 0 !important;
+}
+.fmenu li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 12px !important;
+  margin: 0 0;
+  padding: 0px 15px !important;
+  height: 35px;
+  line-height: 35px;
+}
+.menu_bar .fmenu li a:hover {
+  border-bottom: 0.8px solid black;
 }
